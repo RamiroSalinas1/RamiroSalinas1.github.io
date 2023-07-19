@@ -1,0 +1,33 @@
+// Contenido del archivo _mixins.scss
+
+// Mixin para el centrado vertical y horizontal
+@mixin center-both {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin para el centrado horizontal
+@mixin center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+// Mixin para el centrado vertical
+@mixin center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+// Mixin para crear breakpoints media queries
+@mixin media-breakpoint($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 576px) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: 768px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: 992px) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: 1200px) { @content; }
+  }
+}
